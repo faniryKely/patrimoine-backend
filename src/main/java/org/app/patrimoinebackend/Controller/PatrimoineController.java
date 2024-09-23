@@ -25,10 +25,9 @@ public class PatrimoineController {
                 return ResponseEntity.ok(patrimoines);
             }
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            e.printStackTrace();
         }
-
-
+         return  ResponseEntity.notFound().build();
     }
 
     @PutMapping("/Patrimoine/{id}")

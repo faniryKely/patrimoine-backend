@@ -58,7 +58,7 @@ public class PatrimoineTest {
 
         @Test
         public void testUpdateOrCreatePatrimoineUpdate() throws Exception {
-            int id = 1;
+            int id = 0;
             Patrimoine patrimoine = new Patrimoine(4,"Jane Doe", null);
             when(patrimoineService.updatePatrimoine(id, patrimoine)).thenReturn(patrimoine);
             when(patrimoineService.readPatrimoinesFromFile()).thenReturn(List.of(patrimoine));
